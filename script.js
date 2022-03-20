@@ -1,5 +1,13 @@
 'use strict'
-window.onload = function() {
+$(document).ready(function(){ 
+
+    $('.wrapper').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false,
+    })
+
     const heart = document.querySelector('.heart');
     const container = document.querySelector('.first-screen');
   
@@ -47,11 +55,14 @@ window.onload = function() {
                     photos[2].addEventListener('animationend', function() {
                         const finalText = document.querySelector('.text');
                         finalText.classList.add('text__animation');
+                        const slider = document.querySelector('.wrapper');
+                        slider.classList.add('wrapper__animation');
                     })
                 })
             })
         })
     }
     heart.addEventListener('animationend', animationFirstPhoto);
+   
     
-}
+})

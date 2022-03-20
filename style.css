@@ -64,6 +64,7 @@ ul li {
 
 img {
   vertical-align: top;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -493,11 +494,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 48px;
+  font-size: 36px;
   letter-spacing: 3px;
   text-align: center;
   font-family: 'Marck Script', cursive;
-  margin: 200px auto 0;
+  margin: 90px auto 0;
   -webkit-animation: textAnimation 5s;
           animation: textAnimation 5s;
   -webkit-animation-fill-mode: forwards;
@@ -510,4 +511,192 @@ body {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
-/*# sourceMappingURL=style.css.map */
+
+.card{
+  display: flex;
+  justify-content: center;
+  }
+  
+  .card__container{
+      perspective: 1000px;
+      margin: 20px 0 10px 0;
+      width: 250px;
+      height: 350px;;
+      transform-style: preserve-3d;
+      transition: all 0.7s ease;
+      position: relative;
+      box-shadow: 0px 0px 6px 2px #00000050;
+      border-radius: 10px;
+  }
+  .card__name{
+      text-align: center;
+      color: #143a0591;
+      font-size: 36px;
+      font-style: italic;
+      
+  }
+  .card__about{
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      padding: 0 10px;
+      line-height: 20px;
+      font-style: italic;
+  }
+  .card__photo{
+      margin-top: 0px;
+      background-image:url('./img/Няш.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  .card__front, .card__back{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: #58f9ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:center;
+      border-radius: 10px;
+  }
+  .card__back{
+      transform: rotateY(180deg);
+  }
+  .card__container:hover {
+      transform: rotateY(180deg);
+    }
+  
+  
+  /* /////////////////////Filya/////////////////////////// */
+  .card__photo-filya{
+      margin-top: 0px;
+      background-image:url('./img/Филя.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  
+  
+  .card__front-filya, .card__back-filya{
+      background-color: aquamarine;
+  }
+  
+  /* /////////////////////Cusya/////////////////////////// */
+  .card__photo-cusya{
+      margin-top: 0px;
+      background-image:url('./img/Куся.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  .card__front-cusya, .card__back-cusya{
+      background-color: rgb(236, 92, 56);
+  }
+  
+  /* /////////////////////Tolya/////////////////////////// */
+  
+  .card__photo-tolya{
+      margin-top: 0px;
+      background-image:url('./img/Толя.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  .card__front-tolya, .card__back-tolya{
+      background-color: rgb(132, 107, 247);
+  }
+  
+  /* /////////////////////Zlo/////////////////////////// */
+  .card__photo-zlo{
+      margin-top: 0px;
+      background-image:url('./img/Зло.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  .card__front-zlo, .card__back-zlo{
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+  }
+  .card__name-zlo{
+      color: #fff;
+  }
+  
+  /* /////////////////////dobro/////////////////////////// */
+  .card__photo-dobro{
+      margin-top: 0px;
+      background-image:url('./img/Добро.jpg');
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+  .card__front-dobro, .card__back-dobro{
+      background-color: rgb(248, 212, 212);
+      color: #000;
+  }
+  .card__name-dobro{
+      color: #000;
+  }
+  .card__photo-miya{
+    margin-top: 0px;
+    background-image:url('./img/Мия.jpg');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.card__front-miya, .card__back-miya{
+    background-color: rgb(237, 110, 248);
+    color: rgb(255, 255, 255);
+}
+.card__name-zlo{
+    color: rgb(255, 255, 255);
+}
+                  /* Slaider */
+  .slick-track{
+      display: flex;
+  }
+  .slick-list{
+      overflow: hidden;
+  }
+
+  .wrapper{
+    transform: translateX(-1000px);
+  }
+  .wrapper__animation{
+    display: block;
+    opacity: 0;
+    animation: slider 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slider {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
